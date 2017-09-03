@@ -51,13 +51,13 @@ const filterItems = (catalog, filters) => {
     }
 
     if (filters.price_min !== undefined) {
-        let price_max = filters.price_max !== undefined ? 
+        let priceMax = filters.price_max !== undefined ? 
             filters.price_max : 
             MAX_PRICE
         
         visibleItems = visibleItems.filter(item => 
             item.price > parseFloat(filters.price_min) && 
-            item.price < parseFloat(price_max)
+            item.price < parseFloat(priceMax)
         )
     }
 

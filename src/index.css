@@ -6,16 +6,42 @@ body {
 
 .items-list {
     list-style: none;
-    padding: 0;
+    padding: 20px;
     margin: 0;
+    font-size: 12px;
+    display: inline-block;
+    width: 50%;
 }
 
 .items-list li {
     margin: 10px 0;
+    /* display: inline-block;
+    width: 100%; */
 }
 
-.items-list li span {
-    margin: 0 2px;
+.item-name {
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+    position: relative;
+}
+
+.item-name__new {
+    color: #f00;
+    font-size: 12px;
+    position: absolute;
+    top: -5px;
+}
+
+.item-attrs {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.item-attrs li {
+    display: inline-block;
+    width: 30%;
 }
 
 .Overlay {
@@ -118,6 +144,9 @@ button.Close_Modal:hover {
   color: #000;
   text-decoration: underline;
   cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .filter-link:hover {
@@ -127,3 +156,4 @@ button.Close_Modal:hover {
 .filter-row.filter-row__price input {
     width: 50px;
 }
+
