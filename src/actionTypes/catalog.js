@@ -1,0 +1,1 @@
+export const UPDATE = 'CATALOG_UPDATE'

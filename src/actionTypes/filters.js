@@ -1,0 +1,1 @@
+export const APPLY = 'APPLY_FILTERS'
