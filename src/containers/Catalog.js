@@ -7,7 +7,8 @@ import ItemsList from '../components/ItemsList'
 import { 
     CHOOSE_COLOR, 
     CHOOSE_KIND, 
-    MAX_VISIBLE_ITEMS_COUNT 
+    MAX_VISIBLE_ITEMS_COUNT,
+    MAX_PRICE
 } from '../constants'
 
 class CatalogContainer extends React.Component {
@@ -49,10 +50,14 @@ const filterItems = (catalog, filters) => {
         visibleItems = visibleItems.filter(item => item.is_new === filters.is_new)
     }
 
-    if (filters.price_min !== undefined && filters.price_max !== undefined) {
+    if (filters.price_min !== undefined) {
+        let price_max = filters.price_max !== undefined ? 
+            filters.price_max : 
+            MAX_PRICE
+        
         visibleItems = visibleItems.filter(item => 
             item.price > parseFloat(filters.price_min) && 
-            item.price < parseFloat(filters.price_max)
+            item.price < parseFloat(price_max)
         )
     }
 
